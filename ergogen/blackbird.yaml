@@ -1,0 +1,59 @@
+meta:
+  author: "nickbanderson"
+units:
+  kx: cx
+  ky: cy
+  px: cx + 2
+  py: cy + 2
+points:
+  zones:
+    matrix:
+      key:
+        padding: 1ky
+        spread: 1kx
+      anchor:
+        rotate: -5.5
+      columns:
+        outer:
+          rows.number.skip: true
+          rows.thumb.skip: true
+        pinky:
+          rows.number.skip: true
+          rows.thumb.skip: true
+        ring:
+          rows.thumb.skip: true
+          #key.spread: kx # use this for distancing from pinky
+          key.splay: -8
+          key.stagger: 12
+          rows.pinky_boi:
+            shift: [-kx, -1.7ky]
+        middle:
+          rows.thumb.skip: true
+          key.stagger: 5
+        index:
+          key.stagger: -6
+        inner:
+      rows:
+        thumb:
+        bottom:
+        home:
+        top:
+        number:
+    thumbfan:
+      key:
+        spread: 1.15kx
+        stagger: -2
+        splay: -12
+      anchor:
+        ref: matrix_inner_thumb
+        shift: [1.15kx, 0]
+      columns:
+        1:
+        2:
+        3:
+      rows:
+        thumb:
+  rotate: -20
+  mirror:
+    ref: matrix_inner_number
+    distance: 1.5kx
